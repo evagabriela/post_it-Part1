@@ -1,4 +1,3 @@
-
 // When the user clicks anywhere on the Board, a new PostIt is generated.
 var Board = function( selector ) {
   // Your board related code goes here
@@ -23,7 +22,7 @@ var Board = function( selector ) {
 
   function initialize() {
     $($elem).on("click", function(e){
-      new PostIt(e.pagex, e.pageY, $elem);
+      new PostIt(e.pageX, e.pageY, $elem);
     });
   }
     // What needs to happen when this object is created?
