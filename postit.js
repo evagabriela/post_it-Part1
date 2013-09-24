@@ -12,6 +12,15 @@ var Board = function( selector ) {
   // Use $elem to access the DOM element for this board
   var $elem = $( selector );
 
+// alternative way of calling initalize. When using 'this.initialize', call 
+// new Board('#board').initialize();
+
+  // this.initialize = function(){
+  //   $($elem).on("click", function(e){
+  //     new PostIt(e.pagex, e.pageY, $elem);
+  //   });
+  // }
+
   function initialize() {
     $($elem).on("click", function(e){
       new PostIt(e.pagex, e.pageY, $elem);
@@ -48,6 +57,7 @@ var PostIt = function(x, y, board) {
 $(function() {
   // This code will run when the DOM has finished loading
    new Board('#board');
+
 });
 
 
