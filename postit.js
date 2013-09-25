@@ -22,7 +22,7 @@ var Board = function( selector ) {
 
   function initialize() {
     $($elem).on("click", function(e){
-      new PostIt(e.pageX, e.pageY, $elem);
+      new PostIt(e.pageX, e.pageY, $elem); // you can use offset instead of page
     });
   }
     // What needs to happen when this object is created?
