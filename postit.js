@@ -41,6 +41,8 @@ var PostIt = function(x, y, board) {
     var content = $("<div class = 'content'>").attr("contenteditable", "true");
     $("<div class = 'post-it'>").css("top",y).css("left",x).append(header).append(content).appendTo(board);
     $(".post-it").draggable({cancel : '.content'});
+  // can also do it:
+  // .draggable({handle:myHead})
 
     $(".post-it").on("click", function(e){
       e.stopPropagation();
