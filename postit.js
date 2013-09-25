@@ -43,6 +43,17 @@ var PostIt = function(x, y, board) {
     $(".post-it").draggable({cancel : '.content'});
   // can also do it:
   // .draggable({handle:myHead})
+  
+  // TO REMOVE the post it (through the head):
+  //  header.find("a").on('click', function() {
+  // e.stopProgagation()
+  //  this.$elem.remove()
+  // delete.this
+
+// destroy ==> need to finish... (creating a prototype to do the above as a "destroy")
+// PostIt.prototype.destroy = function(){
+// destroy..... 
+// }
 
     $(".post-it").on("click", function(e){
       e.stopPropagation();
